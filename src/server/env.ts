@@ -13,4 +13,6 @@ export const redisConfig = () => {
   return url && token ? { url, token } : null;
 };
 
-export const blobToken = () => envVar("BLOB_READ_WRITE_TOKEN");
+// A custom Blob prefix replaces "BLOB" (e.g. SKT_READ_WRITE_TOKEN), so also match by the token's own format.
+export const blobToken = () =>
+  envVar("BLOB_READ_WRITE_TOKEN") ?? Object.values(process.env).find((v) => v?.startsWith("vercel_blob_rw_"));
