@@ -4,6 +4,7 @@ import path from "node:path";
 import { put } from "@vercel/blob";
 import { type NextRequest, NextResponse } from "next/server";
 import { SESSION_COOKIE, verifySessionToken } from "@/server/auth";
+import { blobToken } from "@/server/env";
 import { UPLOADS_DIR } from "@/server/store";
 
 const TYPES: Record<string, string> = {
@@ -44,9 +45,13 @@ export async function POST(request: NextRequest) {
   if (!looksValid) return NextResponse.json({ error: "This file doesn't look like a valid image." }, { status: 415 });
 
   const name = `${Date.now().toString(36)}-${randomBytes(6).toString("hex")}.${ext}`;
-  if (process.env.BLOB_READ_WRITE_TOKEN) {
-    const blob = await put(`uploads/${name}`, bytes, { access: "public", contentType: file.type, cacheControlMaxAge: 31536000 });
+  const token = blobToken();
+  if (token) {
+    const blob = await put(`uploads/${name}`, bytes, { access: "public", contentType: file.type, cacheControlMaxAge: 31536000, token });
     return NextResponse.json({ url: blob.url });
+  }
+  if (process.env.VERCEL) {
+    return NextResponse.json({ error: "Uploads need Vercel Blob storage. Connect a Blob store to this project in Vercel, then redeploy." }, { status: 503 });
   }
   await fs.mkdir(UPLOADS_DIR, { recursive: true });
   await fs.writeFile(path.join(UPLOADS_DIR, name), bytes);

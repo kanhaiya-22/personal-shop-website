@@ -14,12 +14,13 @@ import { team } from "@/data/team";
 import { testimonials } from "@/data/testimonials";
 import { setLocale } from "@/i18n";
 import type { PublicSettings, SiteContent, SiteSettings } from "@/types";
+import { redisConfig } from "./env";
 
 /**
- * Content store. On Vercel (Upstash Redis env vars present) all admin-editable
- * content is one JSON value under REDIS_KEY; otherwise it lives in
- * `storage/content.json`. Uploads go to Vercel Blob when BLOB_READ_WRITE_TOKEN
- * is set, else to `storage/uploads/`.
+ * Content store. On Vercel (Upstash Redis env vars present, any prefix) all
+ * admin-editable content is one JSON value under REDIS_KEY; otherwise it lives
+ * in `storage/content.json`. Uploads go to Vercel Blob when a
+ * BLOB_READ_WRITE_TOKEN is set, else to `storage/uploads/`.
  *
  * The local folder location can be changed with DATA_DIR. Back it up regularly.
  * Pages and admin screens only use the exported functions here.
@@ -30,7 +31,8 @@ export const UPLOADS_DIR = path.join(DATA_DIR, "uploads");
 const CONTENT_FILE = path.join(DATA_DIR, "content.json");
 
 export const REDIS_KEY = "site:content";
-const redis = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL ? Redis.fromEnv() : null;
+const redisEnv = redisConfig();
+const redis = redisEnv ? new Redis(redisEnv) : null;
 
 const digits = (v?: string) => (v ?? "").replace(/\D/g, "").replace(/^91(?=\d{10}$)/, "");
 

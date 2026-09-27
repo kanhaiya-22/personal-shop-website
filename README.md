@@ -83,7 +83,7 @@ On Vercel, content is stored in **Upstash Redis** and uploads in **Vercel Blob**
 
 1. Import the GitHub repo in Vercel.
 2. **Storage → Marketplace → Upstash Redis** → create and connect it to the project (adds `KV_REST_API_URL` / `KV_REST_API_TOKEN`).
-3. **Storage → Blob** → create and connect it (adds `BLOB_READ_WRITE_TOKEN`).
+3. **Storage → Blob** → create and connect it (adds `BLOB_READ_WRITE_TOKEN`). A custom env var prefix (e.g. `SKT_KV_REST_API_URL`) also works.
 4. **Settings → Environment Variables** → add the `ADMIN_*` values from `.env`.
 5. Optional, to keep edits you made locally: `vercel env pull .env.local && node --env-file=.env.local scripts/push-content-to-redis.mjs`
 6. Redeploy, then **Settings → Domains** → add your domain and follow the DNS instructions.
