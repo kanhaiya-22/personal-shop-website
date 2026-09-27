@@ -14,6 +14,8 @@ const nextConfig: NextConfig = {
   images: {
     // WebP only: much cheaper to encode than AVIF on a small server, still well compressed.
     formats: ["image/webp"],
+    // Admin uploads are stored on Vercel Blob in production.
+    remotePatterns: [{ protocol: "https", hostname: "**.public.blob.vercel-storage.com" }],
   },
 };
 

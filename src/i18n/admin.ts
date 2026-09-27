@@ -123,8 +123,8 @@ export const adminEn = {
     upload: "Upload",
     replace: "Replace",
     remove: "Remove",
-    hintImage: "JPG, PNG or WebP, up to 8 MB. Photos are resized automatically for fast loading.",
-    hintVideo: "MP4 (recommended) or WebM, up to 60 MB. Short (10–30 s), landscape clips work best.",
+    hintImage: "JPG, PNG or WebP, up to 4 MB. Photos are resized automatically for fast loading.",
+    hintVideo: "MP4 (recommended) or WebM, up to 4 MB. Short (5–15 s), compressed landscape clips work best.",
     failed: "Upload failed.",
   },
   settings: {
@@ -334,8 +334,8 @@ export const adminHi: AdminDictionary = {
     upload: "अपलोड करें",
     replace: "बदलें",
     remove: "हटाएं",
-    hintImage: "JPG, PNG या WebP, 8 MB तक। फ़ोटो तेज़ लोडिंग के लिए अपने आप छोटी हो जाती हैं।",
-    hintVideo: "MP4 (बेहतर) या WebM, 60 MB तक। छोटे (10–30 सेकंड), चौड़े वीडियो सबसे अच्छे रहते हैं।",
+    hintImage: "JPG, PNG या WebP, 4 MB तक। फ़ोटो तेज़ लोडिंग के लिए अपने आप छोटी हो जाती हैं।",
+    hintVideo: "MP4 (बेहतर) या WebM, 4 MB तक। छोटे (5–15 सेकंड), कंप्रेस किए हुए चौड़े वीडियो सबसे अच्छे रहते हैं।",
     failed: "अपलोड नहीं हो सका।",
   },
   settings: {

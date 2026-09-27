@@ -3,6 +3,7 @@ import "server-only";
 import { randomBytes } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { Redis } from "@upstash/redis";
 import { connection } from "next/server";
 import { cache } from "react";
 import { brands } from "@/data/brands";
@@ -15,17 +16,21 @@ import { setLocale } from "@/i18n";
 import type { PublicSettings, SiteContent, SiteSettings } from "@/types";
 
 /**
- * File-based store. All admin-editable content lives in `storage/content.json`,
- * uploaded images and videos in `storage/uploads/`.
+ * Content store. On Vercel (Upstash Redis env vars present) all admin-editable
+ * content is one JSON value under REDIS_KEY; otherwise it lives in
+ * `storage/content.json`. Uploads go to Vercel Blob when BLOB_READ_WRITE_TOKEN
+ * is set, else to `storage/uploads/`.
  *
- * The folder location can be changed with DATA_DIR. Back it up regularly.
- * To move to a database later, re-implement the exported functions here —
- * pages and admin screens only use these functions.
+ * The local folder location can be changed with DATA_DIR. Back it up regularly.
+ * Pages and admin screens only use the exported functions here.
  */
 
 export const DATA_DIR = path.resolve(/*turbopackIgnore: true*/ process.env.DATA_DIR || path.join(process.cwd(), "storage"));
 export const UPLOADS_DIR = path.join(DATA_DIR, "uploads");
 const CONTENT_FILE = path.join(DATA_DIR, "content.json");
+
+export const REDIS_KEY = "site:content";
+const redis = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL ? Redis.fromEnv() : null;
 
 const digits = (v?: string) => (v ?? "").replace(/\D/g, "").replace(/^91(?=\d{10}$)/, "");
 
@@ -124,7 +129,23 @@ function serialise<T>(task: () => Promise<T>): Promise<T> {
 // In-memory cache keyed by file modification time.
 let contentCache: { mtimeMs: number; data: SiteContent } | null = null;
 
+async function readStored(): Promise<SiteContent | null> {
+  return redis ? await redis.get<SiteContent>(REDIS_KEY) : await readJson<SiteContent>(CONTENT_FILE);
+}
+
+async function writeStored(data: SiteContent) {
+  if (redis) await redis.set(REDIS_KEY, data);
+  else await writeJsonAtomic(CONTENT_FILE, data);
+}
+
 async function loadContent(): Promise<SiteContent> {
+  if (redis) {
+    const raw = await readStored();
+    if (raw) return migrate(raw);
+    const seeded = seedContent();
+    await serialise(() => writeStored(seeded));
+    return seeded;
+  }
   let stat;
   try {
     stat = await fs.stat(CONTENT_FILE);
@@ -165,11 +186,11 @@ export function toPublicSettings(settings: SiteSettings): PublicSettings {
 /** Applies `mutate` to a fresh copy of the content and saves it atomically. */
 export function updateContent(mutate: (draft: SiteContent) => void | SiteContent): Promise<SiteContent> {
   return serialise(async () => {
-    const current = migrate((await readJson<SiteContent>(CONTENT_FILE)) ?? seedContent());
+    const current = migrate((await readStored()) ?? seedContent());
     const draft = structuredClone(current);
     const result = mutate(draft) ?? draft;
     result.updatedAt = new Date().toISOString();
-    await writeJsonAtomic(CONTENT_FILE, result);
+    await writeStored(result);
     contentCache = null;
     setLocale(result.settings.language);
     return result;
