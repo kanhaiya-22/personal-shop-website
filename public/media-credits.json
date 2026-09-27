@@ -545,12 +545,6 @@
       "source": "https://www.pexels.com/photo/6764266/",
       "author": "Pavel Danilyuk",
       "license": "Pexels License"
-    },
-    "paint-colours": {
-      "file": "/images/sections/paint-colours.jpg",
-      "source": "https://www.pexels.com/photo/assorted-color-paint-buckets-1887946/",
-      "author": "Pexels contributor",
-      "license": "Pexels License"
     }
   },
   "videos": {
@@ -564,17 +558,6 @@
       "height": 1080,
       "sizeMB": 6.85,
       "durationSec": 14.7
-    },
-    "showcase-2": {
-      "file": "/videos/showcase-2.mp4",
-      "poster": "/videos/showcase-2-poster.jpg",
-      "source": "https://www.pexels.com/video/time-lapse-video-of-a-construction-site-5674342/",
-      "author": "Site Engine",
-      "license": "Pexels License",
-      "width": 1920,
-      "height": 1080,
-      "sizeMB": 8.6,
-      "durationSec": 12.7
     }
   }
 }
