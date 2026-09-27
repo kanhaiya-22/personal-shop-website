@@ -1,10 +1,9 @@
 import { randomBytes } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { put } from "@vercel/blob";
 import { type NextRequest, NextResponse } from "next/server";
 import { SESSION_COOKIE, verifySessionToken } from "@/server/auth";
-import { blobToken } from "@/server/env";
+import { uploadToBlob } from "@/server/blob";
 import { UPLOADS_DIR } from "@/server/store";
 
 const TYPES: Record<string, string> = {
@@ -19,7 +18,7 @@ const TYPES: Record<string, string> = {
 // Vercel rejects request bodies over 4.5 MB, so keep uploads (plus form overhead) under that.
 const MAX_SIZE = 4 * 1024 * 1024;
 
-/** Admin image / video upload → Vercel Blob when configured, else storage/uploads/<random>.<ext> served at /uploads/<file>. */
+/** Admin image / video upload → Vercel Blob when connected, else storage/uploads/<random>.<ext>, served at /uploads/<file>. */
 export async function POST(request: NextRequest) {
   if (!verifySessionToken(request.cookies.get(SESSION_COOKIE)?.value)) {
     return NextResponse.json({ error: "Please sign in again." }, { status: 401 });
@@ -45,18 +44,10 @@ export async function POST(request: NextRequest) {
   if (!looksValid) return NextResponse.json({ error: "This file doesn't look like a valid image." }, { status: 415 });
 
   const name = `${Date.now().toString(36)}-${randomBytes(6).toString("hex")}.${ext}`;
-  const token = blobToken();
-  if (token) {
-    const blob = await put(`uploads/${name}`, bytes, { access: "public", contentType: file.type, cacheControlMaxAge: 31536000, token });
-    return NextResponse.json({ url: blob.url });
-  }
+  const blobUrl = await uploadToBlob(name, bytes, file.type);
+  if (blobUrl) return NextResponse.json({ url: blobUrl });
   if (process.env.VERCEL) {
-    // Names only (never values), shown to signed-in admins to diagnose a missing Blob connection.
-    const seen = Object.keys(process.env).filter((k) => /BLOB|READ_WRITE|STORE/i.test(k));
-    return NextResponse.json(
-      { error: `Uploads need Vercel Blob storage. Connect a Blob store to this project in Vercel, then redeploy. Storage variables found: ${seen.join(", ") || "none"}.` },
-      { status: 503 },
-    );
+    return NextResponse.json({ error: "Uploads need Vercel Blob storage. Connect a Blob store to this project in Vercel, then redeploy." }, { status: 503 });
   }
   await fs.mkdir(UPLOADS_DIR, { recursive: true });
   await fs.writeFile(path.join(UPLOADS_DIR, name), bytes);

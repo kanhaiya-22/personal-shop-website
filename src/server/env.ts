@@ -16,3 +16,6 @@ export const redisConfig = () => {
 // A custom Blob prefix replaces "BLOB" (e.g. SKT_READ_WRITE_TOKEN), so also match by the token's own format.
 export const blobToken = () =>
   envVar("BLOB_READ_WRITE_TOKEN") ?? Object.values(process.env).find((v) => v?.startsWith("vercel_blob_rw_"));
+
+/** Store id for newer Blob stores that authenticate with Vercel OIDC instead of a token (e.g. SKT_STORE_ID). */
+export const blobStoreId = () => envVar("BLOB_STORE_ID") ?? envVar("STORE_ID");

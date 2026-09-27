@@ -1,6 +1,7 @@
 import { createReadStream, promises as fs } from "node:fs";
 import path from "node:path";
 import { Readable } from "node:stream";
+import { readPrivateUpload } from "@/server/blob";
 import { UPLOADS_DIR } from "@/server/store";
 
 const MIME: Record<string, string> = {
@@ -22,13 +23,6 @@ const MIME: Record<string, string> = {
 export async function GET(req: Request, ctx: RouteContext<"/uploads/[file]">) {
   const { file } = await ctx.params;
   if (!/^[a-z0-9-]+\.(jpe?g|png|webp|avif|gif|mp4|webm)$/i.test(file)) return new Response("Not found", { status: 404 });
-  const full = path.join(UPLOADS_DIR, file);
-  let size: number;
-  try {
-    size = (await fs.stat(full)).size;
-  } catch {
-    return new Response("Not found", { status: 404 });
-  }
   const ext = file.split(".").pop()!.toLowerCase();
   const headers: Record<string, string> = {
     "Content-Type": MIME[ext] ?? "application/octet-stream",
@@ -36,6 +30,13 @@ export async function GET(req: Request, ctx: RouteContext<"/uploads/[file]">) {
     "X-Content-Type-Options": "nosniff",
     "Accept-Ranges": "bytes",
   };
+  const full = path.join(UPLOADS_DIR, file);
+  let size: number;
+  try {
+    size = (await fs.stat(full)).size;
+  } catch {
+    return servePrivateBlob(file, req.headers.get("range"), headers);
+  }
 
   const range = req.headers.get("range")?.match(/^bytes=(\d*)-(\d*)$/);
   if (range) {
@@ -52,4 +53,16 @@ export async function GET(req: Request, ctx: RouteContext<"/uploads/[file]">) {
   }
   const stream = Readable.toWeb(createReadStream(full)) as ReadableStream;
   return new Response(stream, { headers: { ...headers, "Content-Length": String(size) } });
+}
+
+/** Falls back to a private Vercel Blob store (production uploads). */
+async function servePrivateBlob(file: string, range: string | null, headers: Record<string, string>) {
+  const result = await readPrivateUpload(file, range).catch(() => null);
+  if (!result) return new Response("Not found", { status: 404 });
+  const out = { ...headers };
+  for (const h of ["content-length", "content-range"]) {
+    const v = result.headers.get(h);
+    if (v) out[h] = v;
+  }
+  return new Response(result.stream, { status: out["content-range"] ? 206 : 200, headers: out });
 }
