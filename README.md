@@ -77,13 +77,26 @@ storage/                 ← created automatically on first start (git-ignored)
 
 ## 4. Hosting
 
-Because content is saved to disk, host it where the filesystem persists:
+### Vercel (recommended)
+
+On Vercel, content is stored in **Upstash Redis** and uploads in **Vercel Blob**. This switches on automatically when their env vars are present.
+
+1. Import the GitHub repo in Vercel.
+2. **Storage → Marketplace → Upstash Redis** → create and connect it to the project (adds `KV_REST_API_URL` / `KV_REST_API_TOKEN`).
+3. **Storage → Blob** → create and connect it (adds `BLOB_READ_WRITE_TOKEN`).
+4. **Settings → Environment Variables** → add the `ADMIN_*` values from `.env`.
+5. Optional, to keep edits you made locally: `vercel env pull .env.local && node --env-file=.env.local scripts/push-content-to-redis.mjs`
+6. Redeploy, then **Settings → Domains** → add your domain and follow the DNS instructions.
+
+Uploads are limited to 4 MB (Vercel's request size limit), so compress videos before uploading.
+
+### Self-hosted
+
+Without those env vars, content is saved to `storage/` on disk, so host it where the filesystem persists:
 
 - **VPS / cloud VM** (any provider): `npm ci && npm run build && npm start` behind Nginx/Caddy, e.g. with `pm2`.
 - **Railway / Render / Fly.io** with a persistent volume mounted at `storage/` (or set `DATA_DIR`).
 - **Docker**: mount a volume for `/app/storage`.
-
-Serverless hosts with a read-only filesystem (e.g. Vercel) will not keep admin changes.
 
 After going live, set **Admin → Settings → Website address** to your real URL (used for Google, sitemap and share links).
 
