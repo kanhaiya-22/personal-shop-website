@@ -51,7 +51,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ url: blob.url });
   }
   if (process.env.VERCEL) {
-    return NextResponse.json({ error: "Uploads need Vercel Blob storage. Connect a Blob store to this project in Vercel, then redeploy." }, { status: 503 });
+    // Names only (never values), shown to signed-in admins to diagnose a missing Blob connection.
+    const seen = Object.keys(process.env).filter((k) => /BLOB|READ_WRITE|STORE/i.test(k));
+    return NextResponse.json(
+      { error: `Uploads need Vercel Blob storage. Connect a Blob store to this project in Vercel, then redeploy. Storage variables found: ${seen.join(", ") || "none"}.` },
+      { status: 503 },
+    );
   }
   await fs.mkdir(UPLOADS_DIR, { recursive: true });
   await fs.writeFile(path.join(UPLOADS_DIR, name), bytes);
