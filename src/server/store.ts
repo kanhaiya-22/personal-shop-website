@@ -151,7 +151,12 @@ async function loadContent(): Promise<SiteContent> {
     stat = await fs.stat(CONTENT_FILE);
   } catch {
     const seeded = seedContent();
-    await serialise(() => writeJsonAtomic(CONTENT_FILE, seeded));
+    try {
+      await serialise(() => writeJsonAtomic(CONTENT_FILE, seeded));
+    } catch (err) {
+      // Read-only filesystem (e.g. Vercel without Redis): serve the seed content instead of crashing.
+      console.warn(`[store] Cannot write ${CONTENT_FILE} (${(err as NodeJS.ErrnoException).code}); serving read-only seed content. Connect Upstash Redis to enable admin edits.`);
+    }
     contentCache = null;
     return seeded;
   }
