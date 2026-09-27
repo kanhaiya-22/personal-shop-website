@@ -1,0 +1,167 @@
+{
+  "ultratech": {
+    "file": "/brands/ultratech.png",
+    "source": "https://en.wikipedia.org/wiki/File:Ultratech_Cement_Logo.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "acc": {
+    "file": "/brands/acc.png",
+    "source": "https://commons.wikimedia.org/wiki/File:ACC_Limited_logo.svg",
+    "note": "Wikimedia Commons; 500px PNG rendition of the SVG."
+  },
+  "tata-tiscon": {
+    "file": "/brands/tata-tiscon.png",
+    "source": "https://tatatiscon.co.in/wp-content/uploads/2025/06/tata-tiscon-logo.webp",
+    "note": "Official Tata Tiscon site header logo (400px WebP converted to PNG). Tiscon-specific logo, not the Tata Steel fallback."
+  },
+  "jsw-neosteel": {
+    "file": "/brands/jsw-neosteel.png",
+    "source": "https://www.jswneosteel.in/wp-content/themes/jswneosteeltheme/images/neo-steel-logo.svg",
+    "note": "Official JSW Neosteel site logo SVG, rendered to 500px PNG with headless Chrome. Neosteel-specific logo, not the JSW Steel fallback."
+  },
+  "asian-paints": {
+    "file": "/brands/asian-paints.png",
+    "source": "https://en.wikipedia.org/wiki/File:Asian_paints_logo.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "berger": {
+    "file": "/brands/berger.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Berger.png",
+    "note": "Wikimedia Commons PNG (743px), downscaled to 500px."
+  },
+  "nerolac": {
+    "file": "/brands/nerolac.png",
+    "source": "https://en.wikipedia.org/wiki/File:Kansai_Nerolac_Paints_logo.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "birla-white": {
+    "file": "/brands/birla-white.png",
+    "source": "https://www.birlawhite.com/logo.svg",
+    "note": "Official Birla White site logo SVG. Outer white canvas rect removed, rendered with headless Chrome, cropped and saved at 500px."
+  },
+  "dr-fixit": {
+    "file": "/brands/dr-fixit.png",
+    "source": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/images/desktop/dr-fixit.png",
+    "note": "Official Pidilite corporate site brand logo, cropped to content and saved at 500px. The official lockup includes the Dr. Fixit character."
+  },
+  "fevicol": {
+    "file": "/brands/fevicol.png",
+    "source": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/images/desktop/Fevicol.png",
+    "note": "Official Pidilite corporate site brand logo, cropped to content and saved at 500px. The Wikipedia version was only 158px wide."
+  },
+  "ambuja": {
+    "file": "/brands/ambuja.png",
+    "source": "https://en.wikipedia.org/wiki/File:Ambuja_Cements.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "shree-cement": {
+    "file": "/brands/shree-cement.png",
+    "source": "https://en.wikipedia.org/wiki/File:Shree_cement_logo.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "jk-lakshmi": {
+    "file": "/brands/jk-lakshmi.png",
+    "source": "https://www.jklakshmicement.com/wp-content/themes/jk-laxmi/images/jk-logo.png",
+    "note": "Official JK Lakshmi Cement site header logo (native 300px PNG, not upscaled)."
+  },
+  "dalmia": {
+    "file": "/brands/dalmia.png",
+    "source": "https://en.wikipedia.org/wiki/File:Dalmia_Group.svg",
+    "note": "Wikipedia non-free Dalmia Bharat logo (from the Dalmia Group article); 500px PNG rendition, cropped. Official dalmiacement.com logos are white-on-transparent only, so not used."
+  },
+  "wonder-cement": {
+    "file": "/brands/wonder-cement.png",
+    "source": "https://en.wikipedia.org/wiki/File:Wonder_Cement.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "sail": {
+    "file": "/brands/sail.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Steel_Authority_of_India_logo.svg",
+    "note": "Wikimedia Commons; 500px PNG rendition of the SVG. Cropped to content."
+  },
+  "jindal-panther": {
+    "file": "/brands/jindal-panther.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Jindal_Steel_Limited_Logo.png",
+    "note": "Corporate Jindal Steel (formerly Jindal Steel & Power / JSPL) logo, not a Panther TMT-specific logo. Wikimedia Commons 500px thumbnail, cropped to content."
+  },
+  "kamdhenu": {
+    "file": "/brands/kamdhenu.png",
+    "source": "https://www.kamdhenulimited.com/front/images/footer-logo.webp",
+    "note": "Official Kamdhenu Limited site logo (Kamdhenu Group lockup). Native 229px WebP converted to PNG and cropped; small, not upscaled."
+  },
+  "nippon": {
+    "file": "/brands/nippon.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Nippon_Paint_company_logo.svg",
+    "note": "Wikimedia Commons; 500px PNG rendition of the SVG. Global Nippon Paint corporate logo with \"Basic & New\" tagline."
+  },
+  "dulux": {
+    "file": "/brands/dulux.png",
+    "source": "https://images.akzonobel.com/akzonobel-common/DULUX_RGB_imp_05.png",
+    "note": "Official Dulux \"let's colour\" logo served on dulux.in (AkzoNobel image CDN). Native 250px, not upscaled. dulux.in also shows a \"JSW Dulux\" lockup (images.akzonobel.com/akzonobel-common/jsw-dulux-logo.png)."
+  },
+  "indigo-paints": {
+    "file": "/brands/indigo-paints.png",
+    "source": "https://en.wikipedia.org/wiki/File:Indigo_Paints_Logo.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "shalimar": {
+    "file": "/brands/shalimar.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Shalimar_Paints_New_Logo.jpg",
+    "note": "Wikimedia Commons JPG (289px) converted to PNG and cropped; white background kept (logo has white interior)."
+  },
+  "jsw-paints": {
+    "file": "/brands/jsw-paints.png",
+    "source": "https://www.jswpaints.in/themes/custom/jsw_theme/images/new_page_logo.svg",
+    "note": "Official JSW Paints site logo SVG, rendered to 500px PNG with headless Chrome."
+  },
+  "fosroc": {
+    "file": "/brands/fosroc.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Fosroc-logo-RGB.jpg",
+    "note": "Wikimedia Commons JPG, 500px thumbnail converted to PNG and cropped; white background kept."
+  },
+  "sika": {
+    "file": "/brands/sika.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Logo_Sika_AG.svg",
+    "note": "Wikimedia Commons; 500px PNG rendition of the SVG."
+  },
+  "myk-laticrete": {
+    "file": "/brands/myk-laticrete.png",
+    "source": "https://media.myklaticrete.com/mykl/2024/09/MYK-L-Logo-1-2.svg",
+    "note": "Official MYK Laticrete site logo SVG, rendered to 500px PNG with headless Chrome."
+  },
+  "roff": {
+    "file": "/brands/roff.png",
+    "source": "https://www.pidilite.com/content/dam/pidilitecorporatewebsite/images/desktop/Roff.png",
+    "note": "Official Pidilite corporate site brand logo, cropped to content and saved at 500px. The official lockup includes the Roff crocodile mascot."
+  },
+  "jk-wall-putty": {
+    "file": "/brands/jk-wall-putty.png",
+    "source": "https://www.jkcement.com/wp-content/themes/jkcement/images/new-logo-jk.webp",
+    "note": "JK Cement corporate logo (maker of JK White Cement / JK Wall Putty); no separate wall-putty or white-cement brand logo found on the official site. 561px WebP converted to PNG, cropped and saved at 500px."
+  },
+  "kajaria": {
+    "file": "/brands/kajaria.png",
+    "source": "https://www.kajariaceramics.com/images/logo-dark.svg",
+    "note": "Official Kajaria Ceramics site logo SVG, rendered to 500px PNG with headless Chrome."
+  },
+  "somany": {
+    "file": "/brands/somany.png",
+    "source": "https://d3joggurz1vobr.cloudfront.net/storefront/images/svg/new-somany-logo.svg",
+    "note": "Official Somany Ceramics site logo SVG (served from its storefront CDN), rendered to 500px PNG with headless Chrome."
+  },
+  "johnson-tiles": {
+    "file": "/brands/johnson-tiles.png",
+    "source": "https://www.hrjohnsonindia.com/assets/images/logo-johnson.png",
+    "note": "Official H & R Johnson site header logo (\"Johnson Designers' Choice\"). Native 290px PNG, not upscaled."
+  },
+  "century-ply": {
+    "file": "/brands/century-ply.png",
+    "source": "https://en.wikipedia.org/wiki/File:Century_Plyboards.svg",
+    "note": "Wikipedia non-free logo; 500px PNG rendition of the SVG."
+  },
+  "greenply": {
+    "file": "/brands/greenply.png",
+    "source": "https://www.greenply.com/assets/images/logo.svg",
+    "note": "Official Greenply site logo SVG, rendered to 500px PNG with headless Chrome and cropped."
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "icons": {
+    "source": "Microsoft Fluent Emoji (github.com/microsoft/fluentui-emoji)",
+    "license": "MIT",
+    "files": {
+      "adhesives": "/icons/3d/adhesives.png",
+      "bricks": "/icons/3d/bricks.png",
+      "brush": "/icons/3d/brush.png",
+      "bucket": "/icons/3d/bucket.png",
+      "cement": "/icons/3d/cement.png",
+      "chat": "/icons/3d/chat.png",
+      "chemicals": "/icons/3d/chemicals.png",
+      "clock": "/icons/3d/clock.png",
+      "diya": "/icons/3d/diya.png",
+      "electrical": "/icons/3d/electrical.png",
+      "enamel": "/icons/3d/enamel.png",
+      "estimate": "/icons/3d/estimate.png",
+      "exterior": "/icons/3d/exterior.png",
+      "handshake": "/icons/3d/handshake.png",
+      "hardware": "/icons/3d/hardware.png",
+      "house": "/icons/3d/house.png",
+      "interior": "/icons/3d/interior.png",
+      "ladder": "/icons/3d/ladder.png",
+      "location": "/icons/3d/location.png",
+      "metal": "/icons/3d/metal.png",
+      "money": "/icons/3d/money.png",
+      "other": "/icons/3d/other.png",
+      "palette": "/icons/3d/palette.png",
+      "party": "/icons/3d/party.png",
+      "phone": "/icons/3d/phone.png",
+      "pipes": "/icons/3d/pipes.png",
+      "plumbing": "/icons/3d/plumbing.png",
+      "plywood": "/icons/3d/plywood.png",
+      "primer": "/icons/3d/primer.png",
+      "putty": "/icons/3d/putty.png",
+      "quality": "/icons/3d/quality.png",
+      "roofing": "/icons/3d/roofing.png",
+      "sand": "/icons/3d/sand.png",
+      "sanitary": "/icons/3d/sanitary.png",
+      "sealant": "/icons/3d/sealant.png",
+      "search": "/icons/3d/search.png",
+      "star": "/icons/3d/star.png",
+      "steel": "/icons/3d/steel.png",
+      "texture": "/icons/3d/texture.png",
+      "thinner": "/icons/3d/thinner.png",
+      "tiles": "/icons/3d/tiles.png",
+      "tools": "/icons/3d/tools.png",
+      "truck": "/icons/3d/truck.png",
+      "waterproofing": "/icons/3d/waterproofing.png",
+      "wood": "/icons/3d/wood.png",
+      "worker": "/icons/3d/worker.png"
+    }
+  },
+  "products": {
+    "opc-53-grade-cement": {
+      "file": "/images/products/opc-53-grade-cement.jpg",
+      "source": "https://www.pexels.com/photo/29817952/",
+      "author": "Aliaksei Smalenski",
+      "license": "Pexels License"
+    },
+    "ppc-cement": {
+      "file": "/images/products/ppc-cement.jpg",
+      "source": "https://www.pexels.com/photo/29288248/",
+      "author": "Sergei Starostin",
+      "license": "Pexels License"
+    },
+    "white-cement": {
+      "file": "/images/products/white-cement.jpg",
+      "source": "https://www.pexels.com/photo/38561968/",
+      "author": "David Antonio Cruz Naira",
+      "license": "Pexels License"
+    },
+    "tmt-bars-fe-500d": {
+      "file": "/images/products/tmt-bars-fe-500d.jpg",
+      "source": "https://www.pexels.com/photo/46167/",
+      "author": "Pixabay",
+      "license": "Pexels License"
+    },
+    "binding-wire": {
+      "file": "/images/products/binding-wire.jpg",
+      "source": "https://www.pexels.com/photo/36397792/",
+      "author": "Willians Huerta",
+      "license": "Pexels License"
+    },
+    "red-clay-bricks": {
+      "file": "/images/products/red-clay-bricks.jpg",
+      "source": "https://www.pexels.com/photo/33617858/",
+      "author": "Al Rashed",
+      "license": "Pexels License"
+    },
+    "aac-blocks": {
+      "file": "/images/products/aac-blocks.jpg",
+      "source": "https://www.pexels.com/photo/36386830/",
+      "author": "Peter Dyllong",
+      "license": "Pexels License"
+    },
+    "fly-ash-bricks": {
+      "file": "/images/products/fly-ash-bricks.jpg",
+      "source": "https://www.pexels.com/photo/33894661/",
+      "author": "sirmudi_photography",
+      "license": "Pexels License"
+    },
+    "river-sand": {
+      "file": "/images/products/river-sand.jpg",
+      "source": "https://www.pexels.com/photo/4888564/",
+      "author": "cottonbro studio",
+      "license": "Pexels License"
+    },
+    "stone-aggregate-20mm": {
+      "file": "/images/products/stone-aggregate-20mm.jpg",
+      "source": "https://www.pexels.com/photo/5799727/",
+      "author": "anni",
+      "license": "Pexels License"
+    },
+    "waterproofing-compound": {
+      "file": "/images/products/waterproofing-compound.jpg",
+      "source": "https://www.pexels.com/photo/39238328/",
+      "author": "Bulat843",
+      "license": "Pexels License"
+    },
+    "bonding-agent": {
+      "file": "/images/products/bonding-agent.jpg",
+      "source": "https://www.pexels.com/photo/30582116/",
+      "author": "Moussa Idrissi",
+      "license": "Pexels License"
+    },
+    "tile-adhesive": {
+      "file": "/images/products/tile-adhesive.jpg",
+      "source": "https://www.pexels.com/photo/11806489/",
+      "author": "Vladimir Srajber",
+      "license": "Pexels License"
+    },
+    "tile-grout": {
+      "file": "/images/products/tile-grout.jpg",
+      "source": "https://www.pexels.com/photo/11806482/",
+      "author": "Vladimir Srajber",
+      "license": "Pexels License"
+    },
+    "masonry-tools": {
+      "file": "/images/products/masonry-tools.jpg",
+      "source": "https://www.pexels.com/photo/18861859/",
+      "author": "Bimbim Sindu",
+      "license": "Pexels License"
+    },
+    "vitrified-floor-tiles": {
+      "file": "/images/products/vitrified-floor-tiles.jpg",
+      "source": "https://www.pexels.com/photo/11701151/",
+      "author": "Max Vakhtbovych",
+      "license": "Pexels License"
+    },
+    "roofing-sheets": {
+      "file": "/images/products/roofing-sheets.jpg",
+      "source": "https://www.pexels.com/photo/48895/",
+      "author": "Pixabay",
+      "license": "Pexels License"
+    },
+    "commercial-plywood": {
+      "file": "/images/products/commercial-plywood.jpg",
+      "source": "https://www.pexels.com/photo/12278568/",
+      "author": "Mark Stebnicki",
+      "license": "Pexels License"
+    },
+    "interior-emulsion": {
+      "file": "/images/products/interior-emulsion.jpg",
+      "source": "https://www.pexels.com/photo/17948130/",
+      "author": "Kirti Phadke",
+      "license": "Pexels License"
+    },
+    "distemper": {
+      "file": "/images/products/distemper.jpg",
+      "source": "https://www.pexels.com/photo/5583126/",
+      "author": "Polina Tankilevitch",
+      "license": "Pexels License"
+    },
+    "exterior-emulsion": {
+      "file": "/images/products/exterior-emulsion.jpg",
+      "source": "https://www.pexels.com/photo/20542611/",
+      "author": "Warren Griffiths",
+      "license": "Pexels License"
+    },
+    "wall-primer": {
+      "file": "/images/products/wall-primer.jpg",
+      "source": "https://www.pexels.com/photo/5691700/",
+      "author": "Ksenia Chernaya",
+      "license": "Pexels License"
+    },
+    "wall-putty": {
+      "file": "/images/products/wall-putty.jpg",
+      "source": "https://www.pexels.com/photo/5583128/",
+      "author": "Polina Tankilevitch",
+      "license": "Pexels License"
+    },
+    "synthetic-enamel": {
+      "file": "/images/products/synthetic-enamel.jpg",
+      "source": "https://www.pexels.com/photo/6920160/",
+      "author": "Kaboompics",
+      "license": "Pexels License"
+    },
+    "pu-wood-finish": {
+      "file": "/images/products/pu-wood-finish.jpg",
+      "source": "https://www.pexels.com/photo/5974351/",
+      "author": "Ono Kosuki",
+      "license": "Pexels License"
+    },
+    "wood-polish-varnish": {
+      "file": "/images/products/wood-polish-varnish.jpg",
+      "source": "https://www.pexels.com/photo/3615730/",
+      "author": "La Miko",
+      "license": "Pexels License"
+    },
+    "red-oxide-metal-primer": {
+      "file": "/images/products/red-oxide-metal-primer.jpg",
+      "source": "https://www.pexels.com/photo/6364588/",
+      "author": "Magda Ehlers",
+      "license": "Pexels License"
+    },
+    "roof-waterproof-coating": {
+      "file": "/images/products/roof-waterproof-coating.jpg",
+      "source": "https://www.pexels.com/photo/12534266/",
+      "author": "Eyes2Soul Eyes2Soul",
+      "license": "Pexels License"
+    },
+    "texture-paint": {
+      "file": "/images/products/texture-paint.jpg",
+      "source": "https://www.pexels.com/photo/33939695/",
+      "author": "Patrick",
+      "license": "Pexels License"
+    },
+    "general-purpose-thinner": {
+      "file": "/images/products/general-purpose-thinner.jpg",
+      "source": "https://www.pexels.com/photo/13606561/",
+      "author": "Mian Rizwan",
+      "license": "Pexels License"
+    },
+    "paint-brushes": {
+      "file": "/images/products/paint-brushes.jpg",
+      "source": "https://www.pexels.com/photo/6816397/",
+      "author": "Ivan S",
+      "license": "Pexels License"
+    },
+    "paint-rollers": {
+      "file": "/images/products/paint-rollers.jpg",
+      "source": "https://www.pexels.com/photo/5853940/",
+      "author": "Antoni Shkraba",
+      "license": "Pexels License"
+    },
+    "masking-tape": {
+      "file": "/images/products/masking-tape.jpg",
+      "source": "https://www.pexels.com/photo/3615720/",
+      "author": "La Miko",
+      "license": "Pexels License"
+    },
+    "silicone-sealant": {
+      "file": "/images/products/silicone-sealant.jpg",
+      "source": "https://www.pexels.com/photo/3615723/",
+      "author": "La Miko",
+      "license": "Pexels License"
+    },
+    "sandpaper": {
+      "file": "/images/products/sandpaper.jpg",
+      "source": "https://www.pexels.com/photo/12774180/",
+      "author": "Karina Badura",
+      "license": "Pexels License"
+    },
+    "opc-43-grade-cement": {
+      "file": "/images/products/opc-43-grade-cement.jpg",
+      "source": "https://www.pexels.com/photo/stacked-cement-bags-on-wooden-pallet-outdoors-29817952/",
+      "author": "Aliaksei Smalenski",
+      "license": "Pexels License"
+    },
+    "psc-slag-cement": {
+      "file": "/images/products/psc-slag-cement.jpg",
+      "source": "https://www.pexels.com/photo/men-unloading-bags-from-truck-9226958/",
+      "author": "Nishant Aneja",
+      "license": "Pexels License"
+    },
+    "ready-mix-plaster": {
+      "file": "/images/products/ready-mix-plaster.jpg",
+      "source": "https://www.pexels.com/photo/plastering-work-with-trowel-and-cement-38561968/",
+      "author": "David Antonio Cruz Naira",
+      "license": "Pexels License"
+    },
+    "ms-angle-channel-flat": {
+      "file": "/images/products/ms-angle-channel-flat.jpg",
+      "source": "https://www.pexels.com/photo/stacked-steel-beams-in-industrial-yard-36003989/",
+      "author": "Michael Orshan",
+      "license": "Pexels License"
+    },
+    "ms-pipes-hollow-sections": {
+      "file": "/images/products/ms-pipes-hollow-sections.jpg",
+      "source": "https://www.pexels.com/photo/metals-on-display-14838208/",
+      "author": "Jimmy Liao",
+      "license": "Pexels License"
+    },
+    "tmt-stirrups-rings": {
+      "file": "/images/products/tmt-stirrups-rings.jpg",
+      "source": "https://www.pexels.com/photo/safety-helmet-hanging-on-metal-reinforcement-12709141/",
+      "author": "Nishant Aneja",
+      "license": "Pexels License"
+    },
+    "welded-wire-mesh": {
+      "file": "/images/products/welded-wire-mesh.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-rusty-rebar-grid-for-construction-37475275/",
+      "author": "wal_ 172619",
+      "license": "Pexels License"
+    },
+    "chicken-wire-mesh": {
+      "file": "/images/products/chicken-wire-mesh.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-rolled-metal-wire-mesh-background-34182532/",
+      "author": "Magda Ehlers",
+      "license": "Pexels License"
+    },
+    "solid-concrete-blocks": {
+      "file": "/images/products/solid-concrete-blocks.jpg",
+      "source": "https://www.pexels.com/photo/construction-site-in-forest-with-building-blocks-31688484/",
+      "author": "Amar Preciado",
+      "license": "Pexels License"
+    },
+    "hollow-concrete-blocks": {
+      "file": "/images/products/hollow-concrete-blocks.jpg",
+      "source": "https://www.pexels.com/photo/geometric-pattern-of-concrete-blocks-in-jos-nigeria-37158170/",
+      "author": "Jagaba Denis",
+      "license": "Pexels License"
+    },
+    "badarpur-sand": {
+      "file": "/images/products/badarpur-sand.jpg",
+      "source": "https://www.pexels.com/photo/sand-dunes-under-clear-blue-sky-36176129/",
+      "author": "Peter Dyllong",
+      "license": "Pexels License"
+    },
+    "m-sand": {
+      "file": "/images/products/m-sand.jpg",
+      "source": "https://www.pexels.com/photo/texture-of-sand-17268238/",
+      "author": "David Iloba",
+      "license": "Pexels License"
+    },
+    "stone-dust": {
+      "file": "/images/products/stone-dust.jpg",
+      "source": "https://www.pexels.com/photo/sand-and-gravel-hills-11160727/",
+      "author": "Tom Fisk",
+      "license": "Pexels License"
+    },
+    "stone-aggregate-10mm": {
+      "file": "/images/products/stone-aggregate-10mm.jpg",
+      "source": "https://www.pexels.com/photo/gray-stones-wallpaper-414765/",
+      "author": "Pixabay",
+      "license": "Pexels License"
+    },
+    "stone-aggregate-40mm": {
+      "file": "/images/products/stone-aggregate-40mm.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-stones-12029157/",
+      "author": "Egor Komarov",
+      "license": "Pexels License"
+    },
+    "curing-compound": {
+      "file": "/images/products/curing-compound.jpg",
+      "source": "https://www.pexels.com/photo/construction-worker-smoothing-fresh-concrete-surface-37121398/",
+      "author": "SÀI GÒN CÔNG TY CP SẢN XUẤT - THƯƠNG MẠI",
+      "license": "Pexels License"
+    },
+    "concrete-plasticiser": {
+      "file": "/images/products/concrete-plasticiser.jpg",
+      "source": "https://www.pexels.com/photo/crop-workman-in-rubber-boots-priming-concrete-floor-5777354/",
+      "author": "Nothing Ahead",
+      "license": "Pexels License"
+    },
+    "bathroom-waterproof-coating": {
+      "file": "/images/products/bathroom-waterproof-coating.jpg",
+      "source": "https://www.pexels.com/photo/a-man-doing-construction-work-26795776/",
+      "author": "Rodolfo Gaion",
+      "license": "Pexels License"
+    },
+    "bitumen-compound": {
+      "file": "/images/products/bitumen-compound.jpg",
+      "source": "https://www.pexels.com/photo/workers-putting-concrete-on-the-road-6018652/",
+      "author": "Nicolette Villavicencio",
+      "license": "Pexels License"
+    },
+    "block-jointing-mortar": {
+      "file": "/images/products/block-jointing-mortar.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-man-building-bricks-wall-19688828/",
+      "author": "GOWTHAM AGM",
+      "license": "Pexels License"
+    },
+    "phawda-shovel": {
+      "file": "/images/products/phawda-shovel.jpg",
+      "source": "https://www.pexels.com/photo/shovel-in-pile-of-gravel-stones-26925731/",
+      "author": "Dr Photographer",
+      "license": "Pexels License"
+    },
+    "gainti-pickaxe": {
+      "file": "/images/products/gainti-pickaxe.jpg",
+      "source": "https://www.pexels.com/photo/people-digging-using-shovel-and-pickaxe-3794760/",
+      "author": "K",
+      "license": "Pexels License"
+    },
+    "wheelbarrow": {
+      "file": "/images/products/wheelbarrow.jpg",
+      "source": "https://www.pexels.com/photo/grayscale-photo-of-a-wheelbarrow-6913487/",
+      "author": "Alisa Tsvetova",
+      "license": "Pexels License"
+    },
+    "mortar-tray": {
+      "file": "/images/products/mortar-tray.jpg",
+      "source": "https://www.pexels.com/photo/29288248/",
+      "author": "Sergei Starostin",
+      "license": "Pexels License"
+    },
+    "ceramic-wall-tiles": {
+      "file": "/images/products/ceramic-wall-tiles.jpg",
+      "source": "https://www.pexels.com/photo/tiled-wall-of-a-bathroom-10486084/",
+      "author": "Curtis Adams",
+      "license": "Pexels License"
+    },
+    "parking-tiles": {
+      "file": "/images/products/parking-tiles.jpg",
+      "source": "https://www.pexels.com/photo/pattern-on-pavement-17012266/",
+      "author": "Jan van der Wolf",
+      "license": "Pexels License"
+    },
+    "anti-skid-tiles": {
+      "file": "/images/products/anti-skid-tiles.jpg",
+      "source": "https://www.pexels.com/photo/close-up-of-handmade-concrete-tiles-6611461/",
+      "author": "Yan Krukau",
+      "license": "Pexels License"
+    },
+    "tile-spacers": {
+      "file": "/images/products/tile-spacers.jpg",
+      "source": "https://www.pexels.com/photo/a-person-inserting-tile-spacers-11806486/",
+      "author": "Vladimir Srajber",
+      "license": "Pexels License"
+    },
+    "marble": {
+      "file": "/images/products/marble.jpg",
+      "source": "https://www.pexels.com/photo/collection-of-granite-and-marble-slabs-in-factory-30112371/",
+      "author": "Deane Bayas",
+      "license": "Pexels License"
+    },
+    "granite": {
+      "file": "/images/products/granite.jpg",
+      "source": "https://www.pexels.com/photo/rough-surface-of-a-granite-stone-12106844/",
+      "author": "Engin Akyurt",
+      "license": "Pexels License"
+    },
+    "red-sandstone": {
+      "file": "/images/products/red-sandstone.jpg",
+      "source": "https://www.pexels.com/photo/textured-brick-wall-background-for-design-31190452/",
+      "author": "Jan van der Wolf",
+      "license": "Pexels License"
+    },
+    "interlocking-pavers": {
+      "file": "/images/products/interlocking-pavers.jpg",
+      "source": "https://www.pexels.com/photo/gaps-between-pavers-15360454/",
+      "author": "Moussa Idrissi",
+      "license": "Pexels License"
+    },
+    "kerb-stones": {
+      "file": "/images/products/kerb-stones.jpg",
+      "source": "https://www.pexels.com/photo/photo-of-yellow-leaves-on-the-side-of-the-road-10024141/",
+      "author": "Nguyen Hung",
+      "license": "Pexels License"
+    },
+    "concrete-cover-blocks": {
+      "file": "/images/products/concrete-cover-blocks.jpg",
+      "source": "https://www.pexels.com/photo/pile-of-stacked-concrete-blocks-with-holes-36120820/",
+      "author": "Peter Dyllong",
+      "license": "Pexels License"
+    },
+    "polycarbonate-sheets": {
+      "file": "/images/products/polycarbonate-sheets.jpg",
+      "source": "https://www.pexels.com/photo/exterior-of-modern-greenhouse-structure-33184454/",
+      "author": "Berna",
+      "license": "Pexels License"
+    },
+    "turbo-ventilator": {
+      "file": "/images/products/turbo-ventilator.jpg",
+      "source": "https://www.pexels.com/photo/brown-roof-ventilator-22938256/",
+      "author": "Doğan Alpaslan Demir",
+      "license": "Pexels License"
+    },
+    "block-board": {
+      "file": "/images/products/block-board.jpg",
+      "source": "https://www.pexels.com/photo/close-up-shot-of-plywood-7479035/",
+      "author": "cottonbro studio",
+      "license": "Pexels License"
+    },
+    "mdf-board": {
+      "file": "/images/products/mdf-board.jpg",
+      "source": "https://www.pexels.com/photo/a-person-measuring-a-wood-plank-4980787/",
+      "author": "Julio Muebles",
+      "license": "Pexels License"
+    },
+    "decorative-laminates": {
+      "file": "/images/products/decorative-laminates.jpg",
+      "source": "https://www.pexels.com/photo/samples-of-wooden-floor-6568684/",
+      "author": "cottonbro studio",
+      "license": "Pexels License"
+    },
+    "flush-doors": {
+      "file": "/images/products/flush-doors.jpg",
+      "source": "https://www.pexels.com/photo/stylish-interior-of-bathroom-with-shower-cabin-and-white-cupboard-6933775/",
+      "author": "Max Vakhtbovych",
+      "license": "Pexels License"
+    },
+    "pvc-doors": {
+      "file": "/images/products/pvc-doors.jpg",
+      "source": "https://www.pexels.com/photo/white-room-with-closed-door-of-restroom-6899539/",
+      "author": "Max Vakhtbovych",
+      "license": "Pexels License"
+    },
+    "upvc-windows": {
+      "file": "/images/products/upvc-windows.jpg",
+      "source": "https://www.pexels.com/photo/closed-white-wooden-framed-glass-windows-2290609/",
+      "author": "Waldemar Brandt",
+      "license": "Pexels License"
+    },
+    "plaster-of-paris": {
+      "file": "/images/products/plaster-of-paris.jpg",
+      "source": "https://www.pexels.com/photo/dirty-spatulas-on-floor-in-daylight-5691482/",
+      "author": "Ksenia Chernaya",
+      "license": "Pexels License"
+    },
+    "gypsum-plaster": {
+      "file": "/images/products/gypsum-plaster.jpg",
+      "source": "https://www.pexels.com/photo/a-construction-worker-working-on-the-wall-of-a-house-5493658/",
+      "author": "Antoni Shkraba",
+      "license": "Pexels License"
+    },
+    "gypsum-board": {
+      "file": "/images/products/gypsum-board.jpg",
+      "source": "https://www.pexels.com/photo/drywall-plasterboard-wallboard-27728635/",
+      "author": "Pablo Fernandez",
+      "license": "Pexels License"
+    }
+  },
+  "sections": {
+    "building": {
+      "file": "/images/sections/building.jpg",
+      "source": "https://www.pexels.com/photo/4170184/",
+      "author": "Engin Akyurt",
+      "license": "Pexels License"
+    },
+    "paints": {
+      "file": "/images/sections/paints.jpg",
+      "source": "https://www.pexels.com/photo/6764266/",
+      "author": "Pavel Danilyuk",
+      "license": "Pexels License"
+    },
+    "paint-colours": {
+      "file": "/images/sections/paint-colours.jpg",
+      "source": "https://www.pexels.com/photo/assorted-color-paint-buckets-1887946/",
+      "author": "Pexels contributor",
+      "license": "Pexels License"
+    }
+  },
+  "videos": {
+    "showcase": {
+      "file": "/videos/showcase.mp4",
+      "poster": "/videos/showcase-poster.jpg",
+      "source": "https://www.pexels.com/video/a-person-using-a-roller-paint-to-paint-the-wall-5500748/",
+      "author": "Anastasia Shuraeva",
+      "license": "Pexels License",
+      "width": 2048,
+      "height": 1080,
+      "sizeMB": 6.85,
+      "durationSec": 14.7
+    },
+    "showcase-2": {
+      "file": "/videos/showcase-2.mp4",
+      "poster": "/videos/showcase-2-poster.jpg",
+      "source": "https://www.pexels.com/video/time-lapse-video-of-a-construction-site-5674342/",
+      "author": "Site Engine",
+      "license": "Pexels License",
+      "width": 1920,
+      "height": 1080,
+      "sizeMB": 8.6,
+      "durationSec": 12.7
+    }
+  }
+}
